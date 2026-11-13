@@ -1,6 +1,6 @@
 # lean-agent
 
-A Claude Code plugin for teams: short working rules for how the agent reads, changes and checks code, and one shared workflow for every teammate and their AI agent.
+Lean working rules and team skills for coding agents: short rules for how the agent reads, changes and checks code, and one shared workflow for every teammate and their AI agent. It is a Claude Code plugin, and also usable in Codex, Gemini CLI, Hermes and other agents that read AGENTS.md or skills (see [Other agents](#other-agents)).
 
 It does three things:
 
