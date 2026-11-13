@@ -51,7 +51,34 @@ It prints the size of CLAUDE.md, AGENTS.md and every file they import, which is 
 
 ## Other agents
 
-Copy [RULES.md](RULES.md) into your project's `AGENTS.md`, or into your agent's own rules file. The skills in `skills/*/SKILL.md` are plain Markdown and work in any agent that supports skills.
+The plugin is Claude Code only, but its two parts are plain Markdown and work elsewhere. Clone the repo once:
+
+```bash
+git clone https://github.com/livales/lean-agent.git ~/lean-agent
+```
+
+**1. Working rules.** Paste [RULES.md](RULES.md) into the rules file your agent reads. Putting it in the project's `AGENTS.md` shares it with the whole team.
+
+| Agent | Rules file |
+|---|---|
+| Codex, Cursor, Hermes Agent, most others | `AGENTS.md` in the project |
+| Gemini CLI | `GEMINI.md` in the project |
+
+**2. Skills.** Copy the folders in `skills/` into your agent's skills folder:
+
+| Agent | Command |
+|---|---|
+| Codex, Gemini CLI | `mkdir -p ~/.agents/skills && cp -r ~/lean-agent/skills/* ~/.agents/skills/` |
+| Hermes Agent | `mkdir -p ~/.hermes/skills && cp -r ~/lean-agent/skills/* ~/.hermes/skills/` |
+| Other agents | `npx skills add livales/lean-agent` ([skills CLI](https://github.com/vercel-labs/skills), choose your agent) |
+
+Start a new session afterwards. To update, run `git -C ~/lean-agent pull` and copy again.
+
+Things that differ outside Claude Code:
+- Call a skill by name in your message, for example "run handoff resume". `/lean-agent:…` commands exist only in Claude Code.
+- `ship`, `handoff` and `lean-context` are meant to run only when asked. Other agents may start them on their own, so leave them out if that happens.
+
+**Using a model router such as 9router?** It only changes which model answers, not the agent. Follow the steps for the agent you run through it: for Claude Code, the [Install](#install) steps above.
 
 ## Changing this plugin
 
