@@ -1,6 +1,6 @@
 # lean-agent
 
-A Claude Code plugin for teams: working rules that save tokens, and one shared workflow for every teammate and their AI agent.
+A Claude Code plugin for teams: short working rules for how the agent reads, changes and checks code, and one shared workflow for every teammate and their AI agent.
 
 It does three things:
 
@@ -26,7 +26,7 @@ Then start a new session. To update later: `/plugin marketplace update livales`.
 
 | Part | How to use it | What it does |
 |---|---|---|
-| Working rules ([RULES.md](RULES.md)) | Automatic at session start | About 500 tokens: context, change, verify, report, team |
+| Working rules ([RULES.md](RULES.md)) | Automatic at session start | Context, change, verify, report, team. Adds about 1,200 input tokens per session (measured) |
 | `team-memory` | Automatic, or `/lean-agent:team-memory` | Records decisions (`D<n>` in `docs/DECISIONS.md`), gotchas and rules in the right place in the repo |
 | `lean-context` | `/lean-agent:lean-context` | Measures and trims AGENTS.md / CLAUDE.md, or creates them for a new repo |
 | `ship` | `/lean-agent:ship` | Checks scope, runs the checks, updates docs, branches, then opens a PR that is ready to review |
