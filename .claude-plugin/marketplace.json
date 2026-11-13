@@ -1,0 +1,12 @@
+{
+  "name": "livales",
+  "owner": { "name": "Livales" },
+  "metadata": { "description": "Claude Code plugins by Livales for lean, collaborative agent work." },
+  "plugins": [
+    {
+      "name": "lean-agent",
+      "source": "./",
+      "description": "Lean working rules and team workflow for coding agents: read less, change less, verify, and keep what the team learns in the repo."
+    }
+  ]
+}
