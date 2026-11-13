@@ -1,7 +1,7 @@
 {
   "name": "lean-agent",
   "description": "Lean working rules and team workflow for coding agents: read less, change less, verify, and keep what the team learns in the repo.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": { "name": "Livales" },
   "license": "MIT"
 }
